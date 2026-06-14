@@ -1,0 +1,129 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "f8n": "https://github.com/f8n/fnd-protocol#",
+    "schema": "https://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "Account": "f8n:Account",
+    "Creator": "f8n:Creator",
+    "NftContract": "f8n:NftContract",
+    "Nft": "f8n:Nft",
+    "NftTransfer": "f8n:NftTransfer",
+    "NftMarketAuction": "f8n:NftMarketAuction",
+    "NftMarketBid": "f8n:NftMarketBid",
+    "NftMarketOffer": "f8n:NftMarketOffer",
+    "NftMarketBuyNow": "f8n:NftMarketBuyNow",
+    "PercentSplit": "f8n:PercentSplit",
+    "Feth": "f8n:Feth",
+    "netRevenueInETH": {
+      "@id": "f8n:netRevenueInETH",
+      "@type": "xsd:decimal"
+    },
+    "netSalesInETH": {
+      "@id": "f8n:netSalesInETH",
+      "@type": "xsd:decimal"
+    },
+    "isPrimarySale": {
+      "@id": "f8n:isPrimarySale",
+      "@type": "xsd:boolean"
+    },
+    "reservePriceInETH": {
+      "@id": "f8n:reservePriceInETH",
+      "@type": "xsd:decimal"
+    },
+    "tokenIPFSPath": {
+      "@id": "f8n:tokenIPFSPath",
+      "@type": "xsd:string"
+    },
+    "amountInETH": {
+      "@id": "f8n:amountInETH",
+      "@type": "xsd:decimal"
+    },
+    "dateCreated": {
+      "@id": "schema:dateCreated",
+      "@type": "xsd:integer"
+    },
+    "dateExpires": {
+      "@id": "f8n:dateExpires",
+      "@type": "xsd:integer"
+    },
+    "transactionHash": {
+      "@id": "f8n:transactionHash",
+      "@type": "xsd:string"
+    },
+    "status": "f8n:status",
+    "seller": "f8n:seller",
+    "buyer": "f8n:buyer",
+    "bidder": "f8n:bidder",
+    "nft": "f8n:nft",
+    "owner": "f8n:owner",
+    "creator": "f8n:creator",
+    "buyReferrer": "f8n:buyReferrer",
+    "buyReferrerFee": {
+      "@id": "f8n:buyReferrerFee",
+      "@type": "xsd:decimal"
+    },
+    "creatorRevenueInETH": {
+      "@id": "f8n:creatorRevenueInETH",
+      "@type": "xsd:decimal"
+    },
+    "foundationRevenueInETH": {
+      "@id": "f8n:foundationRevenueInETH",
+      "@type": "xsd:decimal"
+    },
+    "ownerRevenueInETH": {
+      "@id": "f8n:ownerRevenueInETH",
+      "@type": "xsd:decimal"
+    },
+    "tokenCreatorPaymentAddress": {
+      "@id": "f8n:tokenCreatorPaymentAddress",
+      "@type": "xsd:string"
+    }
+  },
+  "@graph": [
+    {
+      "@type": "schema:WebAPI",
+      "@id": "https://api.thegraph.com/subgraphs/name/f8n/fnd",
+      "schema:name": "Foundation Subgraph API",
+      "schema:description": "GraphQL API powered by The Graph protocol that indexes all Foundation NFT marketplace activity on Ethereum mainnet.",
+      "schema:url": "https://thegraph.com/hosted-service/subgraph/f8n/fnd",
+      "schema:provider": {
+        "@type": "schema:Organization",
+        "schema:name": "Foundation",
+        "schema:url": "https://foundation.app",
+        "schema:sameAs": [
+          "https://twitter.com/foundation",
+          "https://github.com/f8n",
+          "https://www.linkedin.com/company/foundationapp"
+        ]
+      },
+      "schema:documentation": "https://github.com/f8n/fnd-protocol",
+      "schema:termsOfService": "https://foundation.app/tos",
+      "schema:privacyPolicy": "https://foundation.app/privacy",
+      "schema:encodingFormat": "application/graphql"
+    },
+    {
+      "@type": "schema:SoftwareApplication",
+      "@id": "https://github.com/f8n/fnd-protocol",
+      "schema:name": "Foundation Smart Contract Protocol",
+      "schema:description": "Ethereum smart contract protocol for minting NFTs, running auctions, placing offers, and buy-now listings on the Foundation marketplace.",
+      "schema:codeRepository": "https://github.com/f8n/fnd-protocol",
+      "schema:applicationCategory": "Blockchain / NFT Marketplace",
+      "schema:operatingSystem": "Ethereum Mainnet",
+      "schema:offers": {
+        "@type": "schema:Offer",
+        "schema:url": "https://immunefi.com/bounty/foundation/"
+      }
+    },
+    {
+      "@type": "schema:CreativeWork",
+      "@id": "https://github.com/f8n/fnd-protocol/blob/main/subgraph/schema.graphql",
+      "schema:name": "Foundation Subgraph GraphQL Schema",
+      "schema:description": "GraphQL schema defining all entities indexed by the Foundation subgraph including Account, Creator, Nft, NftMarketAuction, NftMarketBid, NftMarketOffer, NftMarketBuyNow, and PercentSplit.",
+      "schema:encodingFormat": "application/graphql",
+      "schema:isPartOf": {
+        "@id": "https://github.com/f8n/fnd-protocol"
+      }
+    }
+  ]
+}

@@ -1,0 +1,148 @@
+{
+  "vocabulary": {
+    "name": "Foundation NFT Marketplace Vocabulary",
+    "description": "Domain vocabulary derived from the Foundation subgraph GraphQL schema and smart contract protocol for the Foundation NFT marketplace on Ethereum.",
+    "version": "1.0.0",
+    "source": "https://github.com/f8n/fnd-protocol/blob/main/subgraph/schema.graphql",
+    "terms": [
+      {
+        "term": "Account",
+        "definition": "An Ethereum wallet address that has interacted with the Foundation marketplace. Tracks NFT ownership, auction activity, bids placed and accepted, transfers, FETH balances, and revenue earned.",
+        "type": "Entity"
+      },
+      {
+        "term": "Creator",
+        "definition": "An account that has minted at least one NFT on Foundation. Tracks total net sales and revenue in ETH from primary and secondary sales.",
+        "type": "Entity"
+      },
+      {
+        "term": "NftContract",
+        "definition": "An ERC-721 smart contract that governs a collection of NFTs. Contains the token name, symbol, and base URI used to construct token metadata URIs.",
+        "type": "Entity"
+      },
+      {
+        "term": "Nft",
+        "definition": "A unique non-fungible token on the Foundation marketplace. Identified by contract address and token ID, linked to a creator, owner, auction history, offers, and buy-now listings.",
+        "type": "Entity"
+      },
+      {
+        "term": "NftTransfer",
+        "definition": "A record of an ERC-721 token transfer on-chain, capturing sender, recipient, timestamp, and transaction hash.",
+        "type": "Entity"
+      },
+      {
+        "term": "NftMarketContract",
+        "definition": "The Foundation marketplace smart contract that manages auctions, offers, and buy-now listings.",
+        "type": "Entity"
+      },
+      {
+        "term": "NftMarketAuction",
+        "definition": "A timed auction for an NFT on Foundation. Tracks seller, highest bidder, reserve price, start/end times, status, and revenue distribution among creator, owner, and protocol.",
+        "type": "Entity"
+      },
+      {
+        "term": "NftMarketBid",
+        "definition": "A bid placed in a Foundation auction. Tracks bidder, amount in ETH, timestamp, transaction hash, and auction reference.",
+        "type": "Entity"
+      },
+      {
+        "term": "NftMarketOffer",
+        "definition": "An offer made to buy an NFT at a fixed price with an expiry. Can be accepted, canceled, outbid, expired, or invalidated.",
+        "type": "Entity"
+      },
+      {
+        "term": "NftMarketBuyNow",
+        "definition": "A fixed-price listing for an NFT that allows immediate purchase. Can be accepted, canceled, or invalidated.",
+        "type": "Entity"
+      },
+      {
+        "term": "PercentSplit",
+        "definition": "A contract that distributes ETH revenue among multiple recipients according to defined percentage shares. Used for collaborative NFT revenue splits.",
+        "type": "Entity"
+      },
+      {
+        "term": "Feth",
+        "definition": "Foundation ETH (FETH) escrow entry. Tracks escrowed ETH locked for bids and the expiry of that escrow.",
+        "type": "Entity"
+      },
+      {
+        "term": "NftHistory",
+        "definition": "An event log entry capturing actions taken on an NFT such as minting, listing, bidding, and transfers.",
+        "type": "Entity"
+      },
+      {
+        "term": "NftAccountApproval",
+        "definition": "An ERC-721 approval granted by an NFT owner to a spender address.",
+        "type": "Entity"
+      },
+      {
+        "term": "NftMarketAuctionStatus",
+        "definition": "Enumeration of auction lifecycle states: Open, Finalized, or Canceled.",
+        "type": "Enum",
+        "values": ["Open", "Finalized", "Canceled"]
+      },
+      {
+        "term": "NftMarketOfferStatus",
+        "definition": "Enumeration of offer lifecycle states: Open, Outbid, Expired, Canceled, Accepted, or Invalidated.",
+        "type": "Enum",
+        "values": ["Open", "Outbid", "Expired", "Canceled", "Accepted", "Invalidated"]
+      },
+      {
+        "term": "NftMarketBuyNowStatus",
+        "definition": "Enumeration of buy-now listing lifecycle states: Open, Canceled, Accepted, or Invalidated.",
+        "type": "Enum",
+        "values": ["Open", "Canceled", "Accepted", "Invalidated"]
+      },
+      {
+        "term": "netRevenueInETH",
+        "definition": "The total ETH earned by a creator or account from NFT sales, excluding any pending amounts.",
+        "type": "Field"
+      },
+      {
+        "term": "netSalesInETH",
+        "definition": "The total ETH received from sales of NFTs minted by a creator.",
+        "type": "Field"
+      },
+      {
+        "term": "isPrimarySale",
+        "definition": "Boolean flag indicating whether an NFT sale is the first sale on Foundation by the original creator.",
+        "type": "Field"
+      },
+      {
+        "term": "reservePriceInETH",
+        "definition": "The minimum ETH amount that must be bid to activate a Foundation auction.",
+        "type": "Field"
+      },
+      {
+        "term": "buyReferrer",
+        "definition": "An Ethereum address that referred a buyer to a Foundation listing and is entitled to a referral fee.",
+        "type": "Field"
+      },
+      {
+        "term": "tokenIPFSPath",
+        "definition": "The IPFS content path appended to the contract baseURI to construct the full metadata URI for an NFT.",
+        "type": "Field"
+      },
+      {
+        "term": "tokenCreatorPaymentAddress",
+        "definition": "An optional address to receive NFT revenue and creator royalty payments, which may be a percent split contract.",
+        "type": "Field"
+      },
+      {
+        "term": "subgraph",
+        "definition": "A The Graph Protocol indexer deployment that listens to Ethereum events from Foundation smart contracts and stores the indexed data in a queryable GraphQL endpoint.",
+        "type": "Concept"
+      },
+      {
+        "term": "Ethereum mainnet",
+        "definition": "The production Ethereum blockchain network where Foundation smart contracts are deployed.",
+        "type": "Concept"
+      },
+      {
+        "term": "ERC-721",
+        "definition": "The Ethereum token standard for non-fungible tokens used by all NFTs on the Foundation marketplace.",
+        "type": "Concept"
+      }
+    ]
+  }
+}
