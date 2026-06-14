@@ -1,0 +1,95 @@
+name: Foundation API FinOps
+description: >-
+  Cost considerations for using Foundation's protocol APIs include
+  The Graph query fees for subgraph access and Ethereum gas fees
+  for on-chain transactions. Foundation itself charges a 5% marketplace
+  fee on all sales (auctions, offers, buy-now) and a 0.0008 ETH
+  per-mint fee for Drops and Editions.
+
+costs:
+
+  - name: Subgraph Queries (Hosted Service)
+    description: Free GraphQL queries via The Graph hosted service endpoint.
+    amount: 0
+    currency: USD
+    model: free
+    notes: >-
+      The Graph hosted service provides free access to the Foundation
+      subgraph for development and low-volume use. No billing setup required.
+
+  - name: Subgraph Queries (The Graph Network)
+    description: >-
+      Pay-per-query fees on The Graph decentralized network. Fees are
+      denominated in GRT (Graph Token) and collected by indexers who
+      serve queries.
+    amount: variable
+    currency: GRT
+    model: pay-per-query
+    notes: >-
+      Average query fees on The Graph Network are fractions of a cent USD
+      per query. Exact cost depends on query complexity and indexer pricing.
+      Developers pre-load a billing contract with GRT or USD-equivalent.
+
+  - name: NFT Minting Gas Fee
+    description: >-
+      Ethereum gas fee paid to miners/validators to mint an NFT on Foundation.
+      Varies with Ethereum network congestion.
+    amount: variable
+    currency: ETH
+    model: gas
+    notes: >-
+      Minting gas costs vary significantly. Historical range is approximately
+      0.003–0.05 ETH depending on network congestion and gas price.
+
+  - name: Auction / Offer / Buy-Now Gas Fee
+    description: >-
+      Gas fees for placing bids, creating offers, setting buy-now prices,
+      or finalizing auctions on Foundation's NFT market contract.
+    amount: variable
+    currency: ETH
+    model: gas
+    notes: >-
+      Market interaction gas fees typically range from 0.002–0.02 ETH
+      per transaction at moderate gas prices.
+
+  - name: Foundation Marketplace Fee (Primary Sale)
+    description: >-
+      Foundation charges creators 5% of the final sale price for primary
+      sales via auctions, offers, or buy-now. Creators net 95% of proceeds.
+    amount: 5
+    currency: percent
+    model: commission
+    notes: >-
+      Applies to the first sale of an NFT by the creator on Foundation.
+
+  - name: Foundation Marketplace Fee (Secondary Sale)
+    description: >-
+      On secondary sales, Foundation charges a 5% platform fee plus the
+      original creator receives a 10% royalty. The seller nets 85%.
+    amount: 15
+    currency: percent
+    model: commission
+    notes: >-
+      5% to Foundation + 10% creator royalty on all secondary sales.
+      Creator royalties are enforced on-chain via the smart contracts.
+
+  - name: Drops and Editions Mint Fee
+    description: >-
+      Fixed per-mint fee for Drop and Edition contracts on Foundation.
+    amount: 0.0008
+    currency: ETH
+    model: per-mint
+    notes: >-
+      Charged at mint time in addition to standard Ethereum gas fees.
+      Payable to Foundation protocol treasury.
+
+  - name: NFT Collection Factory Deployment
+    description: >-
+      Gas fee to deploy a new NFT collection contract via Foundation's
+      NFTCollectionFactory. One-time cost per collection.
+    amount: variable
+    currency: ETH
+    model: gas
+    notes: >-
+      Collection factory deployments cost more gas than standard transactions
+      due to contract creation overhead. Typical range 0.01–0.05 ETH.

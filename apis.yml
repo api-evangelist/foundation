@@ -1,0 +1,120 @@
+name: Foundation
+description: >-
+  Foundation is a creator-focused NFT marketplace built on Ethereum that
+  enables digital artists to mint, showcase, and auction unique digital
+  artworks. The platform provides a GraphQL API via The Graph protocol for
+  querying artwork, auctions, bids, collector profiles, offers, buy-now
+  listings, and edition drop data. Foundation smart contracts remain live
+  on Ethereum mainnet, and the subgraph continues to index on-chain
+  activity for programmatic access.
+image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - NFT
+  - Digital Art
+  - Marketplace
+  - Ethereum
+  - Web3
+  - Blockchain
+  - Creators
+  - Auctions
+  - Collectors
+
+created: '2026-06-13'
+modified: '2026-06-13'
+url: https://raw.githubusercontent.com/api-evangelist/foundation/refs/heads/main/apis.yml
+specificationVersion: '0.19'
+
+apis:
+
+  - name: Foundation Subgraph API
+    description: >-
+      GraphQL API powered by The Graph protocol that indexes all Foundation
+      NFT marketplace activity on Ethereum mainnet. Supports queries for
+      NFTs, creators, collectors, auctions, bids, offers, buy-now listings,
+      percent splits, FETH escrow balances, and full event history.
+      Developers use this as the primary programmatic interface to Foundation
+      on-chain data.
+    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    baseURL: https://api.thegraph.com/subgraphs/name/f8n/fnd
+    humanURL: https://thegraph.com/hosted-service/subgraph/f8n/fnd
+    tags:
+      - GraphQL
+      - NFT
+      - Subgraph
+      - The Graph
+      - Auctions
+      - Digital Art
+    properties:
+      - type: Documentation
+        url: https://github.com/f8n/fnd-protocol
+      - type: GitHubOrganization
+        url: https://github.com/f8n
+      - type: GitHubRepository
+        url: https://github.com/f8n/fnd-protocol
+      - type: GitHubRepository
+        url: https://github.com/f8n/fnd-protocol-examples
+      - type: Plans
+        url: https://raw.githubusercontent.com/api-evangelist/foundation/refs/heads/main/plans/plans.yml
+      - type: RateLimits
+        url: https://raw.githubusercontent.com/api-evangelist/foundation/refs/heads/main/rate-limits/rate-limits.yml
+      - type: FinOps
+        url: https://raw.githubusercontent.com/api-evangelist/foundation/refs/heads/main/finops/finops.yml
+    contact:
+      - FN: Foundation Protocol Discussions
+        url: https://github.com/f8n/fnd-protocol/discussions
+
+  - name: Foundation Smart Contract API
+    description: >-
+      Ethereum smart contract interface for direct on-chain interaction with
+      Foundation marketplace contracts. Supports minting NFTs, creating and
+      bidding in auctions, placing and accepting offers, buy-now listings,
+      and deploying NFT collection contracts via the factory. Contracts are
+      deployed on Ethereum mainnet and remain operational for direct RPC
+      access via providers such as Alchemy or Infura.
+    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    baseURL: https://eth-mainnet.alchemyapi.io
+    humanURL: https://github.com/f8n/fnd-protocol
+    tags:
+      - Smart Contracts
+      - Ethereum
+      - Solidity
+      - Mainnet
+      - NFT Minting
+      - Auctions
+      - RPC
+    properties:
+      - type: Documentation
+        url: https://github.com/f8n/fnd-protocol
+      - type: GitHubRepository
+        url: https://github.com/f8n/fnd-protocol
+      - type: NPMPackage
+        url: https://www.npmjs.com/package/@f8n/fnd-protocol
+      - type: BugBounty
+        url: https://immunefi.com/bounty/foundation/
+      - type: Plans
+        url: https://raw.githubusercontent.com/api-evangelist/foundation/refs/heads/main/plans/plans.yml
+      - type: RateLimits
+        url: https://raw.githubusercontent.com/api-evangelist/foundation/refs/heads/main/rate-limits/rate-limits.yml
+      - type: FinOps
+        url: https://raw.githubusercontent.com/api-evangelist/foundation/refs/heads/main/finops/finops.yml
+    contact:
+      - FN: Foundation Protocol Issues
+        url: https://github.com/f8n/fnd-protocol/issues
+
+common:
+  - type: GitHubOrganization
+    url: https://github.com/f8n
+  - type: TermsOfService
+    url: https://foundation.app/tos
+  - type: PrivacyPolicy
+    url: https://foundation.app/privacy
+  - type: Twitter
+    url: https://twitter.com/foundation
+  - type: Blog
+    url: https://foundation.app/blog
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/foundationapp
+
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com

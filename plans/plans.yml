@@ -1,0 +1,56 @@
+name: Foundation API Plans
+description: >-
+  Foundation's subgraph API is provided through The Graph's hosted service
+  (now transitioning to The Graph Network). Access to the subgraph is
+  free for query use but requires an API key from The Graph Studio for
+  production use on the decentralized network. Smart contract interactions
+  require paying Ethereum gas fees for on-chain transactions.
+
+plans:
+
+  - name: Free Subgraph Query (Hosted Service)
+    description: >-
+      Free access to the Foundation FND subgraph via The Graph's legacy
+      hosted service endpoint. No API key required. Suitable for
+      development and low-volume queries. Subject to rate limits
+      imposed by The Graph hosted service infrastructure.
+    url: https://thegraph.com/hosted-service/subgraph/f8n/fnd
+    price: free
+    pricingModel: free
+    features:
+      - GraphQL queries against all indexed Foundation NFT data
+      - No API key required
+      - Access to NFTs, auctions, bids, offers, collectors, creators
+      - Historical event data from contract deployment
+
+  - name: The Graph Network (Production)
+    description: >-
+      Production access to Foundation subgraph data via The Graph's
+      decentralized network. Requires an API key from Subgraph Studio.
+      Billing is handled through The Graph's GRT-based query fee system,
+      charged per query to indexers on the network.
+    url: https://thegraph.com/studio/apikeys/
+    price: variable
+    pricingModel: pay-per-query
+    features:
+      - API key from The Graph Studio required
+      - Decentralized indexer network for reliability
+      - Pay-per-query in GRT or USD via billing contract
+      - Higher rate limits than hosted service
+      - SLA-backed query responses
+
+  - name: Smart Contract (On-Chain)
+    description: >-
+      Direct interaction with Foundation smart contracts on Ethereum mainnet
+      via any Ethereum JSON-RPC provider (Alchemy, Infura, etc.). Read
+      operations (view/pure functions) are free; write operations
+      (mint, bid, accept offer) require Ethereum gas fees.
+    url: https://github.com/f8n/fnd-protocol
+    price: variable
+    pricingModel: gas-fees
+    features:
+      - Free read calls (eth_call) to contract view functions
+      - Gas fees required for state-changing transactions
+      - NFT minting, auctions, offers, buy-now, collection creation
+      - Direct access to FETH escrow contract
+      - NPM package @f8n/fnd-protocol for TypeScript integration

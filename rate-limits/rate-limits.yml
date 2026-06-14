@@ -1,0 +1,50 @@
+name: Foundation API Rate Limits
+description: >-
+  Rate limits for Foundation's GraphQL subgraph API are governed by The
+  Graph's hosted service infrastructure. Foundation itself does not publish
+  explicit rate limit figures; limits are applied at the infrastructure
+  level by The Graph protocol. Smart contract RPC calls are rate-limited
+  by the chosen RPC provider (e.g., Alchemy, Infura), not by Foundation.
+
+rateLimits:
+
+  - name: The Graph Hosted Service
+    description: >-
+      The Graph hosted service applies undisclosed rate limits per IP or
+      subgraph. Heavy usage or bursts may result in 429 Too Many Requests
+      responses. Foundation's hosted subgraph endpoint is subject to
+      these limits.
+    endpoint: https://api.thegraph.com/subgraphs/name/f8n/fnd
+    type: requests-per-minute
+    limit: unlisted
+    notes: >-
+      The Graph does not publicly document specific rate limits for the
+      hosted service. In practice, lightweight polling (under 60 queries
+      per minute) runs without throttling. For production workloads,
+      migrate to The Graph Network with an API key.
+
+  - name: The Graph Network (API Key)
+    description: >-
+      With an API key from Subgraph Studio, rate limits are significantly
+      higher and tied to the billing plan. The Graph Network does not
+      impose hard per-second limits as long as query fees are available
+      in the billing contract.
+    endpoint: https://gateway.thegraph.com/api/{api-key}/subgraphs/id/{subgraph-id}
+    type: requests-per-second
+    limit: unlisted
+    notes: >-
+      Rate limits on the decentralized network are governed by indexer
+      capacity and the user's billing balance. No explicit published ceiling.
+
+  - name: Smart Contract RPC (Alchemy)
+    description: >-
+      Read calls to Foundation smart contracts via Alchemy's free tier
+      are rate-limited to 330 compute units per second (CUPS). This is
+      an Alchemy limit, not a Foundation limit.
+    endpoint: https://eth-mainnet.alchemyapi.io/v2/{api-key}
+    type: compute-units-per-second
+    limit: 330
+    notes: >-
+      Paid Alchemy plans offer higher throughput. Infura and other
+      providers have similar free-tier limits. Foundation does not
+      impose additional rate limiting on top of the RPC provider.
