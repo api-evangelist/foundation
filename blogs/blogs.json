@@ -12,35 +12,77 @@
       "url": "https://foundation.app",
       "date": "2026-04-27",
       "description": "Foundation Labs announced the permanent closure of the Foundation NFT marketplace. The company attempted to sell the platform to a third party but the transaction did not complete. User NFTs remain in wallets as the platform operated as a non-custodial on-chain system. Foundation will maintain their IPFS gateway through April 27, 2027 to allow a one-year transition period for media preservation.",
-      "tags": ["shutdown", "platform", "NFT", "Ethereum", "IPFS"]
+      "tags": [
+        "shutdown",
+        "platform",
+        "NFT",
+        "Ethereum",
+        "IPFS"
+      ]
     },
     {
       "title": "Foundation Protocol GitHub Repository",
       "url": "https://github.com/f8n/fnd-protocol",
       "date": "2023-01-01",
       "description": "Open-source Ethereum smart contract protocol underpinning the Foundation NFT marketplace. Includes Solidity contracts for NFT minting, timed auctions, buy-now listings, percent splits, and FETH escrow. Contracts remain deployed and operational on Ethereum mainnet.",
-      "tags": ["smart contracts", "Solidity", "Ethereum", "open-source", "NFT"]
+      "tags": [
+        "smart contracts",
+        "Solidity",
+        "Ethereum",
+        "open-source",
+        "NFT"
+      ]
     },
     {
       "title": "Foundation Subgraph on The Graph Protocol",
       "url": "https://thegraph.com/hosted-service/subgraph/f8n/fnd",
       "date": "2022-01-01",
       "description": "Foundation's GraphQL subgraph deployed on The Graph hosted service indexes all on-chain NFT marketplace activity including auctions, bids, offers, transfers, and percent splits. Developers can query this endpoint to access real-time and historical Foundation marketplace data programmatically.",
-      "tags": ["GraphQL", "The Graph", "subgraph", "NFT", "Ethereum", "API"]
+      "tags": [
+        "GraphQL",
+        "The Graph",
+        "subgraph",
+        "NFT",
+        "Ethereum",
+        "API"
+      ]
     },
     {
       "title": "Foundation Protocol Examples",
       "url": "https://github.com/f8n/fnd-protocol-examples",
       "date": "2022-06-01",
       "description": "Official code examples for interacting with the Foundation NFT protocol. Demonstrates how to query the subgraph GraphQL API and interact with Foundation smart contracts programmatically.",
-      "tags": ["examples", "GraphQL", "smart contracts", "developer", "NFT"]
+      "tags": [
+        "examples",
+        "GraphQL",
+        "smart contracts",
+        "developer",
+        "NFT"
+      ]
     },
     {
       "title": "Foundation Bug Bounty on Immunefi",
       "url": "https://immunefi.com/bounty/foundation/",
       "date": "2022-01-01",
       "description": "Foundation maintained a bug bounty program through Immunefi for responsible disclosure of security vulnerabilities in Foundation smart contracts. Smart contracts remain live on Ethereum mainnet.",
-      "tags": ["security", "bug bounty", "Immunefi", "smart contracts"]
+      "tags": [
+        "security",
+        "bug bounty",
+        "Immunefi",
+        "smart contracts"
+      ]
     }
-  ]
+  ],
+  "repo": "foundation",
+  "feeds": [
+    {
+      "source": "https://twitter.com/foundation",
+      "feed_url": "https://twitter.com/foundation",
+      "title": "",
+      "saved": 0,
+      "method": "none"
+    }
+  ],
+  "post_count": 0,
+  "fetched": "2026-06-14T20:42:17Z"
 }
