@@ -5,7 +5,7 @@ description: Foundation is a creator-focused NFT marketplace built on Ethereum t
   auctions, bids, collector profiles, offers, buy-now listings, and edition drop data.
   Foundation smart contracts remain live on Ethereum mainnet, and the subgraph continues
   to index on-chain activity for programmatic access.
-image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 tags:
 - NFT
 - Digital Art
@@ -27,7 +27,7 @@ apis:
     collectors, auctions, bids, offers, buy-now listings, percent splits, FETH escrow
     balances, and full event history. Developers use this as the primary programmatic
     interface to Foundation on-chain data.
-  image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
   baseURL: https://api.thegraph.com/subgraphs/name/f8n/fnd
   humanURL: https://thegraph.com/hosted-service/subgraph/f8n/fnd
   tags:
@@ -64,7 +64,7 @@ apis:
     collection contracts via the factory. Contracts are deployed on Ethereum mainnet
     and remain operational for direct RPC access via providers such as Alchemy or
     Infura.
-  image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
   baseURL: https://eth-mainnet.alchemyapi.io
   humanURL: https://github.com/f8n/fnd-protocol
   tags:
