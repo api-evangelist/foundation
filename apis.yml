@@ -94,6 +94,10 @@ apis:
   - FN: Foundation Protocol Issues
     url: https://github.com/f8n/fnd-protocol/issues
 common:
+- type: VulnerabilityDisclosure
+  url: security/foundation-vulnerability-disclosure.yml
+- type: DomainSecurity
+  url: security/foundation-domain-security.yml
 - type: GitHubOrganization
   url: https://github.com/f8n
 - type: TermsOfService
