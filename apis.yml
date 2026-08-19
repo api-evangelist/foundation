@@ -31,7 +31,7 @@ tags:
 created: '2026-06-13'
 modified: '2026-06-13'
 url: https://raw.githubusercontent.com/api-evangelist/foundation/refs/heads/main/apis.yml
-specificationVersion: '0.19'
+specificationVersion: '0.23'
 apis:
 - name: Foundation Subgraph API
   description: GraphQL API powered by The Graph protocol that indexes all Foundation
