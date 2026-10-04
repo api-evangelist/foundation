@@ -6,16 +6,20 @@ description: Foundation is a creator-focused NFT marketplace built on Ethereum t
   Foundation smart contracts remain live on Ethereum mainnet, and the subgraph continues
   to index on-chain activity for programmatic access.
 deliveryModel:
-  model: unknown
+  model: saas
+  license_evidence:
+    not_product:
+    - f8n/fnd-protocol
+    - f8n/fnd-protocol-examples
   open_source: unknown
   commercial: true
   callable_host: false
-  label: Delivery model not determined — needs a product licence on record
+  label: Hosted service · you call their endpoint
   confidence: low
   source:
   - pricing
-  - repository-unlicensed
-  generated: '2026-08-28'
+  - repository-not-product
+  generated: '2026-09-25'
   method: derived
 accessModel:
   pricing: freemium
