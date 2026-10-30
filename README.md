@@ -64,21 +64,113 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Foundation is a creator-focused NFT marketplace built on Ethereum that enables digital artists to mint, showcase, and auction unique digital artworks. The platform provides a GraphQL API via The Graph protocol for querying artwork, auctions, bids, collector profiles, offers, buy-now listings, and edition drop data.
+Foundation is a creator-focused NFT marketplace built on Ethereum that enables digital artists to mint, showcase, and auction unique digital artworks. The platform provides a GraphQL API via The Graph protocol for querying artwork, auctions, bids, collector profiles, offers, buy-now listings, and edition drop data. Foundation smart contracts remain live on Ethereum mainnet, and the subgraph continues to index on-chain activity for programmatic access.
 
-## APIs
+**Areas:** NFT · Digital Art · Marketplace · Ethereum · Web3 · Blockchain · Creators · Auctions · Collectors
 
-- **Foundation Subgraph API** — GraphQL API via The Graph subgraph indexing all Foundation on-chain activity including NFTs, auctions, bids, offers, creators, and collectors.
-- **Foundation Smart Contract API** — Direct Ethereum smart contract interface for minting, bidding, listing, and collection deployment on Ethereum mainnet.
+## Foundation on APIs.io
 
-## Resources
+Everything profiled for Foundation is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/foundation/](https://apis.io/providers/foundation/)** — or go straight to one of the APIs or properties below.
 
-- [GitHub Organization](https://github.com/f8n)
-- [Smart Contract Repository](https://github.com/f8n/fnd-protocol)
-- [Protocol Examples](https://github.com/f8n/fnd-protocol-examples)
-- [FND Subgraph](https://thegraph.com/hosted-service/subgraph/f8n/fnd)
-- [Bug Bounty (Immunefi)](https://immunefi.com/bounty/foundation/)
+### APIs (2)
 
-## Maintainer
+- [Foundation Subgraph API](https://apis.io/apis/foundation/foundation-subgraph-api/) — GraphQL API powered by The Graph protocol that indexes all Foundation NFT marketplace activity on Ethereum mainnet. Supports queries for NFTs, creators,…
+- [Foundation Smart Contract API](https://apis.io/apis/foundation/foundation-smart-contract-api/) — Ethereum smart contract interface for direct on-chain interaction with Foundation marketplace contracts. Supports minting NFTs, creating and bidding in…
 
-Kin Lane — kin@apievangelist.com
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### GraphQL (1)
+
+GraphQL schemas.
+
+- [Foundation GraphQL API](https://apis.io/graphqls/foundation/foundation-graphql/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Foundation Domain Security](https://apis.io/security/foundation/foundation-domain-security/)
+- [Foundation Vulnerability Disclosure](https://apis.io/security/foundation/foundation-vulnerability-disclosure/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Plans](https://apis.io/plans/foundation/plans/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Rate Limits](https://apis.io/rate-limits/foundation/rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Finops](https://apis.io/finops/foundation/finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.foundation.app/)
+- [Blog](https://foundation.app/blog)
+- [Terms of service](https://foundation.app/tos)
+- [Privacy policy](https://foundation.app/privacy)
+- [GitHub](https://github.com/f8n)
+
+## API Evangelist rating
+
+**Kin Score 21.5** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 66.1 |
+| Contract quality | 35.1 |
+| Contract governance | 0.0 |
+| Operational transparency | 23.7 |
+| Developer ergonomics | 9.5 |
+| Access clarity | 7.9 |
+
+**Agent readiness 15.5** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 11.8** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/foundation/](https://apis.io/providers/foundation/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Foundation: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/foundation/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
